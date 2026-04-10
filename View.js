@@ -1,22 +1,31 @@
 export default class View {
     constructor() {
-        this.pageLogin = document.getElementById('page-login');
-        this.pageSurvey = document.getElementById('page-survey');
+        // Halaman (Sections)
         this.pageDashboard = document.getElementById('page-dashboard');
+        this.pageInput = document.getElementById('page-input');
+        this.pageSurvey = document.getElementById('page-survey');
+        this.pageThankYou = document.getElementById('page-thankyou');
+        this.pageAbout = document.getElementById('page-about');
         
+        // Navigasi
+        this.navDashboard = document.getElementById('nav-dashboard');
+        this.navSurvei = document.getElementById('nav-survei');
+        this.navAbout = document.getElementById('nav-about');
+        this.navItems = [this.navDashboard, this.navSurvei, this.navAbout];
+        
+        // Elemen Input & Text
         this.inputNama = document.getElementById('namaPasien');
         this.displayNama = document.getElementById('displayNama');
         this.loadingIndicator = document.getElementById('loadingIndicator');
         
+        // Statistik & Tombol
         this.statTotal = document.getElementById('statTotal');
         this.statPuas = document.getElementById('statPuas');
         this.statTidakPuas = document.getElementById('statTidakPuas');
-        
-        this.btnLogin = document.getElementById('btn-login');
-        this.btnToDashboard = document.getElementById('btn-to-dashboard');
+        this.btnLanjutSurvei = document.getElementById('btn-lanjut-survei');
+        this.btnRefreshDashboard = document.getElementById('btn-refresh-dashboard');
         this.btnPuas = document.getElementById('btn-puas');
         this.btnTidakPuas = document.getElementById('btn-tidak-puas');
-        this.btnBack = document.getElementById('btn-back');
 
         this.chartInstance = null;
     }
@@ -29,11 +38,23 @@ export default class View {
         this.inputNama.value = '';
     }
 
-    showPage(pageElement) {
-        this.pageLogin.classList.add('hidden-section');
-        this.pageSurvey.classList.add('hidden-section');
-        this.pageDashboard.classList.add('hidden-section');
+    showPage(pageElement, activeNavElement = null) {
+        // Sembunyikan semua halaman
+        const pages = [this.pageDashboard, this.pageInput, this.pageSurvey, this.pageThankYou, this.pageAbout];
+        pages.forEach(page => page.classList.add('hidden-section'));
+        
+        // Tampilkan halaman target
         pageElement.classList.remove('hidden-section');
+
+        // Update styling navigasi jika ada nav element yang aktif
+        if (activeNavElement) {
+            this.navItems.forEach(nav => {
+                nav.classList.remove('text-blue-600', 'font-semibold');
+                nav.classList.add('text-slate-500', 'font-medium');
+            });
+            activeNavElement.classList.remove('text-slate-500', 'font-medium');
+            activeNavElement.classList.add('text-blue-600', 'font-semibold');
+        }
     }
 
     updateUserNameDisplay(name) {
@@ -73,7 +94,7 @@ export default class View {
             options: {
                 responsive: true,
                 plugins: { legend: { position: 'bottom' } },
-                cutout: '70%'
+                cutout: '75%'
             }
         });
     }
