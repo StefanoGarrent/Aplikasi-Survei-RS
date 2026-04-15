@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | IHC Survei Kepuasan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ihc-blue': '#00539C',
+                        'ihc-blue-light': '#3375B0',
+                        'ihc-green': '#78BE20',
+                        'ihc-teal': '#00A3E0',
+                        'ihc-orange': '#F26522'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col bg-[#F4F7FE]">
+
+    <nav id="main-nav" class="fixed w-full top-0 z-50 glass-effect transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-col sm:flex-row gap-3 sm:gap-0 justify-between sm:items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-ihc-blue shadow-sm border border-slate-100">
+                    <i class="ph-bold ph-leaf text-2xl text-ihc-green"></i>
+                </div>
+                <div class="font-extrabold text-slate-800 text-xl md:text-2xl tracking-tight"><span class="text-ihc-blue">IHC</span> <span class="text-ihc-green">Survei</span></div>
+            </div>
+            <div class="w-full sm:w-auto flex gap-1 md:gap-2 bg-white p-1 rounded-2xl shadow-sm border border-slate-100 overflow-x-auto no-scrollbar">
+                <a href="index.html" class="px-3 md:px-5 py-2 rounded-xl text-slate-600 hover:bg-slate-50 font-semibold text-sm md:text-base flex items-center gap-2 transition whitespace-nowrap shrink-0">
+                    <i class="ph-fill ph-squares-four text-lg"></i> Dashboard
+                </a>
+                <a href="survei.html" class="px-3 md:px-5 py-2 rounded-xl text-slate-600 hover:bg-slate-50 font-semibold text-sm md:text-base flex items-center gap-2 transition whitespace-nowrap shrink-0">
+                    <i class="ph ph-clipboard-text text-lg"></i> Survei
+                </a>
+                <a href="about.html" class="px-3 md:px-5 py-2 rounded-xl bg-ihc-blue text-white font-semibold text-sm md:text-base flex items-center gap-2 shadow-sm whitespace-nowrap shrink-0">
+                    <i class="ph ph-info text-lg"></i> About
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center pt-44 sm:pt-32 pb-12 px-4 relative overflow-hidden">
+        <section class="w-full max-w-2xl fade-in relative z-10">
+            <div class="bg-white rounded-[2rem] card-shadow border border-slate-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-ihc-blue via-[#0070c0] to-ihc-teal text-white p-6 md:p-14 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-[1.5rem] bg-white/20 text-white mb-6 shadow-lg border border-white/30">
+                            <i class="ph-fill ph-leaf text-4xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-extrabold mb-2">IHC Survei</h2>
+                        <p class="text-base md:text-xl font-semibold text-white/90">Platform Survei Kepuasan Pasien Rawat Jalan</p>
+                    </div>
+                </div>
+
+                <div class="p-6 md:p-12 space-y-8 md:space-y-10">
+                    <div class="flex items-center gap-4 p-5 bg-[#F4F7FE] rounded-[1.5rem] border border-slate-100">
+                        <div class="flex-shrink-0">
+                            <i class="ph-fill ph-star text-3xl text-amber-500"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-slate-800 text-lg">Versi 1.0</p>
+                            <p class="text-sm text-slate-500">Sistem Informasi Manajemen Kepuasan Pasien Rumah Sakit IHC</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-lightbulb text-ihc-blue"></i> Tentang Aplikasi
+                        </h3>
+                        <div class="bg-slate-50 p-6 rounded-[1.5rem] border border-slate-100 space-y-4 text-slate-600 leading-relaxed text-sm">
+                            <p>Aplikasi IHC Survei dirancang khusus untuk Rumah Sakit IHC (Indonesia Healthcare Corporation) guna mengoptimalkan pengalaman pasien di bagian Kasir Rawat Jalan dengan pendekatan yang inovatif dan user-friendly.</p>
+                            <p>Menggunakan arsitektur web statis modern yang responsif dan cepat, aplikasi ini terintegrasi langsung dengan <strong>Google Apps Script</strong> untuk sinkronisasi data real-time tanpa memerlukan server backend tradisional.</p>
+                            <p>Setiap survei yang diisi pasien langsung tersimpan ke cloud dan dapat dipantau melalui dashboard analytics yang komprehensif untuk meningkatkan kualitas pelayanan.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-rocket text-ihc-green"></i> Fitur Unggulan
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-white rounded-[1.5rem] border border-blue-100 hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="ph-fill ph-lightning text-ihc-blue text-xl"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Respons Cepat</h4>
+                                </div>
+                                <p class="text-xs text-slate-500">Interface yang ringan dan responsif</p>
+                            </div>
+
+                            <div class="p-5 bg-white rounded-[1.5rem] border border-green-100 hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="ph-fill ph-cloud text-ihc-green text-xl"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Cloud Sync</h4>
+                                </div>
+                                <p class="text-xs text-slate-500">Sinkronisasi otomatis dengan aman</p>
+                            </div>
+
+                            <div class="p-5 bg-orange-50/60 rounded-[1.5rem] border border-orange-200 hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="ph-fill ph-chart-line text-ihc-orange text-xl"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Analytics</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 leading-relaxed">Dashboard real-time untuk monitoring kepuasan pasien secara detail</p>
+                            </div>
+
+                            <div class="p-5 bg-cyan-50/60 rounded-[1.5rem] border border-cyan-200 hover:shadow-md transition">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="ph-fill ph-shield-check text-cyan-600 text-xl"></i>
+                                    <h4 class="font-bold text-slate-800 text-sm">Keamanan</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 leading-relaxed">Arsitektur tanpa server untuk keamanan dan privasi maksimal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-gear text-slate-600"></i> Teknologi
+                        </h3>
+                        <div class="flex flex-wrap gap-3 mt-4">
+                            <span class="px-5 py-2.5 bg-white text-blue-600 font-semibold rounded-full text-sm border border-blue-200 shadow-sm">HTML5</span>
+                            <span class="px-5 py-2.5 bg-white text-emerald-600 font-semibold rounded-full text-sm border border-emerald-200 shadow-sm">TailwindCSS</span>
+                            <span class="px-5 py-2.5 bg-amber-50 text-amber-700 font-semibold rounded-full text-sm border border-amber-200">JavaScript</span>
+                            <span class="px-5 py-2.5 bg-cyan-50 text-cyan-700 font-semibold rounded-full text-sm border border-cyan-200">Chart.js</span>
+                            <span class="px-5 py-2.5 bg-orange-50 text-orange-700 font-semibold rounded-full text-sm border border-orange-200">Google Apps Script</span>
+                            <span class="px-5 py-2.5 bg-purple-50 text-purple-700 font-semibold rounded-full text-sm border border-purple-200">Phosphor Icons</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-200 text-center text-slate-500">
+                        <p class="text-sm">© 2026 IHC Survei • Sistem Informasi Manajemen Kepuasan Pasien</p>
+                                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
